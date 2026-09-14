@@ -1,10 +1,69 @@
-# Python-generated files
+# ---------------------------------------------------------------
+# DataStore360 - .dockerignore
+# ---------------------------------------------------------------
+
+# --- Secrets et variables d'environnement ---
+.env
+.env.*
+!*.example
+*.pem
+*.key
+config/*.json
+
+# --- Git ---
+.git/
+.gitignore
+.gitkeep
+.github/
+
+# --- Python ---
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.python-version
+*.egg-info/
+.eggs/
 build/
 dist/
-wheels/
-*.egg-info
 
-# Virtual environments
-.venv
+# --- Tests, cache, linters ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- IDE / editeurs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Rapports generees ---
+reports/*.html
+reports/figures/
+
+# --- Docker ---
+docker-compose.yaml
+.docker/
+
+# --- Donnees (jamais embarquees dans une image) ---
+data/
+*.csv
+*.xlsx
+*.parquet
+*.db
+*.sqlite3
+
+# --- Logs et dossiers de travail ---- 
+logs/
+pgdata/
+postgres-data/
+pgadmin-data/
