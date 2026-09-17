@@ -14,7 +14,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
   pgadmin:
     image: dpage/pgadmin4:9.17
     container_name: pgadmin
@@ -29,7 +29,7 @@ services:
     depends_on:
       - postgres
   airflow:
-    image: apache/airflow:3.0.6
+    image: apache/airflow
     container_name: airflow
     restart: unless-stopped
     command: standalone
